@@ -1,15 +1,15 @@
-/* Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f8f9fa;
+    color: #343a40;
 }
 
-/* Header Styles */
 .header-container {
-    background-color: #0056b3;
+    background-color: #007bff;
     padding: 1rem 2rem;
     color: white;
     display: flex;
@@ -24,7 +24,6 @@ body {
     font-weight: bold;
 }
 
-/* Navigation Styles */
 .navbar {
     list-style-type: none;
     padding: 0;
@@ -44,11 +43,10 @@ body {
 }
 
 .navbar li a:hover {
-    color: #ffdd57;
+    color: #ffc107;
 }
 
-/* Section Styles */
-.intro-section, .about-section, .donation-section, .help-section {
+.intro-section, .about-section, .donation-section, .help-section, .sponsors-section {
     background-color: #ffffff;
     padding: 3rem 2rem;
     text-align: center;
@@ -56,20 +54,24 @@ body {
     margin: 2rem auto;
     max-width: 800px;
     border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
-.intro-section h2, .about-section h2, .donation-section h2, .help-section h2 {
-    color: #0056b3;
+.intro-section:hover, .about-section:hover, .donation-section:hover, .help-section:hover, .sponsors-section:hover {
+    transform: translateY(-10px);
+}
+
+.intro-section h2, .about-section h2, .donation-section h2, .help-section h2, .sponsors-section h2 {
+    color: #007bff;
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-.intro-section p, .about-section p, .donation-section p, .help-section p {
+.intro-section p, .about-section p, .donation-section p, .help-section p, .sponsors-section p {
     font-size: 1.2rem;
-    color: #555;
+    color: #6c757d;
 }
 
-/* Image Styles */
 .responsive-img {
     width: 100%;
     height: auto;
@@ -79,9 +81,39 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer Styles */
-.footer-container {
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    text-align: left;
+    font-weight: bold;
+}
+
+form input, form select, form textarea, form button {
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
     background-color: #0056b3;
+}
+
+.footer-container {
+    background-color: #007bff;
     color: white;
     text-align: center;
     padding: 1.5rem 2rem;
@@ -89,3 +121,14 @@ body {
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.footer-container p {
+    margin: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
